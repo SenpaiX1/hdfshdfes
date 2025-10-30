@@ -79,7 +79,7 @@
         // Ads
         adv: {
           showFullscreenAdv: function(options) {
-            console.log('[SDK Stub] showFullscreenAdv() called');
+            console.log('[SDK Stub] showFullscreenAdv() called - ads disabled');
             if (options && options.callbacks) {
               setTimeout(() => {
                 if (options.callbacks.onClose) options.callbacks.onClose(false);
@@ -87,11 +87,10 @@
             }
           },
           showRewardedVideo: function(options) {
-            console.log('[SDK Stub] showRewardedVideo() called');
+            console.log('[SDK Stub] showRewardedVideo() called - ads disabled, no reward given');
             if (options && options.callbacks) {
               setTimeout(() => {
-                if (options.callbacks.onRewarded) options.callbacks.onRewarded();
-                if (options.callbacks.onClose) options.callbacks.onClose(true);
+                if (options.callbacks.onClose) options.callbacks.onClose(false);
               }, 100);
             }
           }
